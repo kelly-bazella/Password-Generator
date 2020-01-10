@@ -4,12 +4,13 @@ var upperLetter = "ABCDEFGHIJKLMNOPQRSRUVWXYZ";
 var numberList= "1234567890";
 var specialCharacters="!#$%&()*+,-./:;<=>?@[\]^_{|}~";
 
-var generateButton = document.querySelector("#generate");
 
 //function that when generate password button is clicked, prompts user to enter length, which characters and then displays (based on the criteria) a password
 
 function generatePassword(){
     var password = "";
+    var generateButton = document.querySelector("#generate");
+    var display=document.querySelector("#display");
     // ask user parameter questions
     var passwordLength = prompt("How long would you like the password to be? Type number between 8-128.");
     console.log(passwordLength);
@@ -41,9 +42,20 @@ function generatePassword(){
         for (var i = 0; i< passwordLength;i++){
         password+=allowedCharacters.charAt(Math.floor(Math.random()*allowedCharacters.length))
         } 
-return password;
+    display.value=password;
 }
-console.log(generatePassword())
+function myFunction() {
+    /* Get the text field */
+    var copyText = document.getElementById("display");
+  
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+  
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+  
+    /* Alert the copied text */
+    alert("Copied the text: " + copyText.value);
+  }
 
-
-generateButton.addEventListener("click",)
