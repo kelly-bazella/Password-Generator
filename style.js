@@ -2,8 +2,8 @@
 var lowerLetter = "abcdefghijklmnopqrstuvwxyz";
 var upperLetter = "ABCDEFGHIJKLMNOPQRSRUVWXYZ";
 var numberList= "1234567890";
-var specialCharacters="!#$%&()*+,-./:;<=>?@[\\]^_{|}~ ";
-
+var specialCharacters= "!#$%&()*+,-.:;<=>?@[]^_{|}~ ";
+console.log(specialCharacters);
 
 //function that when generate password button is clicked, prompts user to enter length, which characters and then displays (based on the criteria) a password
 
@@ -32,7 +32,7 @@ function generatePassword(){
         allowedCharacters+=upperLetter
     }if (addNumber===true){
         allowedCharacters+=numberList
-    }if(specialCharacters===true){
+    }if(addCharacters===true){
         allowedCharacters+=specialCharacters
     }else if ((addLower===false)&&(addUpper===false)&&(addNumber===false)&&(specialCharacters===false)){
         alert("You have to allow at least one character set! Try again.")
@@ -44,7 +44,6 @@ function generatePassword(){
         } 
     display.value=password;
 }
-
 function copy() {
     let textarea = document.getElementById("display");
     textarea.select();
