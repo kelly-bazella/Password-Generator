@@ -3,4 +3,4 @@ This is a password generate app. When you click the generate password button, a 
 
 In JavaScript, I set variables with strings of what the characters can be. Then I created a function that when the button "generate password" is clicked the user is asked questions. Then, based on their answers to the questions, a string is created with the possible characters that are allowed. 
 
-![alt text](Screenshot (12).png)
+![alt text](Screenshot(12).png)
