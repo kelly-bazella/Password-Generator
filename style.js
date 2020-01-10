@@ -2,7 +2,7 @@
 var lowerLetter = "abcdefghijklmnopqrstuvwxyz";
 var upperLetter = "ABCDEFGHIJKLMNOPQRSRUVWXYZ";
 var numberList= "1234567890";
-var specialCharacters="!#$%&()*+,-./:;<=>?@[\]^_{|}~";
+var specialCharacters="!#$%&()*+,-./:;<=>?@[\\]^_{|}~ ";
 
 
 //function that when generate password button is clicked, prompts user to enter length, which characters and then displays (based on the criteria) a password
@@ -44,18 +44,11 @@ function generatePassword(){
         } 
     display.value=password;
 }
-function myFunction() {
-    /* Get the text field */
-    var copyText = document.getElementById("display");
-  
-    /* Select the text field */
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-  
-    /* Copy the text inside the text field */
+
+function copy() {
+    let textarea = document.getElementById("display");
+    textarea.select();
     document.execCommand("copy");
-  
-    /* Alert the copied text */
-    alert("Copied the text: " + copyText.value);
-  }
+    alert("Password copied to clipboard");
+}
 
