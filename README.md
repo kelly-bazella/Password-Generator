@@ -5,6 +5,3 @@ In JavaScript, I set variables with strings of what the characters can be. Then 
 
 <<<<<<< HEAD
 ![alt text](Screenshot(12).png)
-=======
-![alt text](Screenshot(12).png)
->>>>>>> b7977fbae806327bde26aa09749c16f39fb4f39b
