@@ -9,6 +9,18 @@ function generatePassword(){
     var generateButton = document.querySelector("#generate");
     var display=document.querySelector("#display");
     var passwordLength = prompt("How long would you like the password to be? Type number between 8-128.");
+        if (passwordLength<8){
+            alert("Must choose a number between 8 and 128. Try again.");
+            return;
+        }
+        else if (passwordLength>128){
+            alert("Must choose a number between 8 and 128. Try again.");
+            return;
+        }
+        else if(isNaN(passwordLength)){
+            alert("Must choose a number between 8 and 128. Try again.");
+            return;
+        }
     var addLower = confirm("Would you like the password to include lower case letters?");
     var addUpper = confirm("Would you like the password to include upper case letters?");
     var addNumber = confirm("Would you like the password to include numbers?");
