@@ -13,4 +13,4 @@ You can fork this respository and then open via your preferred browser. From the
 
 ## Picture
 
-![alt text](Screenshot(12).png)
+![](demo.gif)
